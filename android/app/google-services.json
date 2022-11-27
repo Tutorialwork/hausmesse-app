@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "994626030333",
+    "project_id": "hausmesse-382fc",
+    "storage_bucket": "hausmesse-382fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994626030333:android:786e7c1a7adac0b1ebcc94",
+        "android_client_info": {
+          "package_name": "com.example.hausmesse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994626030333-8cdf5ckegd4b1kubvts61abuoo74hahp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQoRlgkCYPi-3V0-SxQwlpcKfTam4ER7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994626030333-8cdf5ckegd4b1kubvts61abuoo74hahp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
