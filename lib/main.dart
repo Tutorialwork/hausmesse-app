@@ -5,7 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:http/http.dart' as http;
 
-String apiUrl = 'https://443f-141-31-147-115.eu.ngrok.io';
+String apiUrl = 'https://hausmesse.loca.lt';
 
 void main() {
   initFirebase();
