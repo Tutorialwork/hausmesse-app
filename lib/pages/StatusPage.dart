@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -16,6 +18,7 @@ class _MainPageState extends State<StatusPage> {
 
   @override
   void initState() {
+    Timer.periodic(Duration(seconds: 10), (_) => getAlarmStatus());
     getAlarmStatus();
     super.initState();
   }
@@ -24,9 +27,9 @@ class _MainPageState extends State<StatusPage> {
     http.Response serverResponse = await http.get(
       Uri.parse(apiUrl + '/status')
     );
-    if (serverResponse.body == "0") {
-      isActivated = false;
-    }
+    setState(() {
+      isActivated = serverResponse.body == "1";
+    });
   }
 
   Future<void> changeAlarmStatus(bool newStatus) async {
@@ -49,7 +52,6 @@ class _MainPageState extends State<StatusPage> {
             onTap: () {
               isActivated = !isActivated;
               changeAlarmStatus(isActivated);
-              getAlarmStatus();
               setState(() {
 
               });
