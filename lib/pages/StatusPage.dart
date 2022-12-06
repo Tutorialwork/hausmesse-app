@@ -14,6 +14,7 @@ class StatusPage extends StatefulWidget {
 
 class _MainPageState extends State<StatusPage> {
 
+  bool loading = true;
   bool isActivated = true;
 
   @override
@@ -29,6 +30,7 @@ class _MainPageState extends State<StatusPage> {
     );
     setState(() {
       isActivated = serverResponse.body == "1";
+      loading = false;
     });
   }
 
@@ -41,7 +43,7 @@ class _MainPageState extends State<StatusPage> {
   
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return !loading ? Container(
       width: MediaQuery.of(context).size.width,
       color: isActivated ? Colors.white : Color(0xff292929),
       child: Column(
@@ -77,6 +79,6 @@ class _MainPageState extends State<StatusPage> {
             style: TextStyle(fontSize: 30, color: isActivated ? Colors.black : Colors.white),),
         ],
       ),
-    );
+    ) : Center(child: CircularProgressIndicator());
   }
 }
